@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP FIVE STUDENTS</title>
+</head>
+<body>
+  <% if(students.length<=0){ %>
+    <h1>No Data Available</h1>
+  <% } else { %>
+    <table border="1" width="100%">
+      <tr>
+        <th>Roll Number</th>
+        <th>USN</th>
+        <th>Student Name</th>
+        <th>Total Marks</th>
+        <th>Department ID</th>
+        <th>Email</th>
+        <th>Semester</th>
+      </tr>
+
+      <% for(var i=0;i<students.length;i++) { %>
+        <tr>
+          <th><%- students[i].rollNo %></th>
+          <th><%- students[i].usn %></th>
+          <th><%- students[i].studName %></th>
+          <th><%- students[i].totalMarks %></th>
+          <th><%- students[i].deptId %></th>
+          <th><%- students[i].email %></th>
+          <th><%- students[i].semester %></th>
+        </tr>
+      <% } %>
+
+    </table>
+  <% } %>
+</body>
+</html>
